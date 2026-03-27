@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabián - Player Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+
+        <div class="p-3 mb-4 rounded-4 shadow-sm"
+            style="background-color: var(--card-bg); border-left: 5px solid var(--accent-blue);">
+            <h5 class="mb-0 text-center text-md-start" style="color: var(--nintendo-dark); font-weight: 800;">
+                <i class="fas fa-comment-dots mx-2" style="color: var(--accent-blue);"></i> ¡Hola, soy Fabian! Esta es
+                una vista de mis juegos favoritos.
+            </h5>
+        </div>
+
+        <div class="profile-header row align-items-center">
+            <div class="col-md-3 text-center mb-3 mb-md-0">
+                <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Happu" alt="Avatar"
+                    class="player-avatar mb-2">
+                <div><span class="badge bg-success rounded-pill px-3">Online</span></div>
+            </div>
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+                    <div>
+                        <h1 class="title-name">Fabián Garcia <span class="badge-level ms-2">Lv. 99</span></h1>
+                        <h5 class="text-muted fw-bold mb-0">Software Engineer</h5>
+                    </div>
+                </div>
+
+                <div class="row fw-bold text-muted">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt" style="color: var(--nintendo-red);"></i> Base:
+                            Villa El Salvador</p>
+                        <p class="mb-0"><i class="fas fa-gamepad" style="color: var(--accent-blue);"></i> Afiliación:
+                            ISIL</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-2">
+                            <div class="d-flex justify-content-between small">
+                                <span>HTML/CSS/JS Logic</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="d-flex justify-content-between small">
+                                <span>API Consumption</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 88%; background: var(--nintendo-red);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="fw-bold mb-4 text-center" style="color: var(--nintendo-dark);">
+            Mis Juegos Favoritos
+        </h3>
+
+        <div class="row g-3 align-items-center mb-4">
+            <div class="col-lg-8 text-center text-lg-start">
+                <div class="filter-tabs" id="platformFilterBtns">
+                    <button class="console-btn active" data-platform="">Todos</button>
+                    <button class="console-btn" data-platform="4">PC</button>
+                    <button class="console-btn" data-platform="187">PS5</button>
+                    <button class="console-btn" data-platform="18">PS4</button>
+                    <button class="console-btn" data-platform="7">Switch</button>
+                    <button class="console-btn" data-platform="1">Xbox</button>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <input type="text" id="busquedaInput" class="form-control search-input"
+                        placeholder="Buscar juego...">
+                    <span class="input-group-text bg-white border-0 text-muted"
+                        style="border-radius: 20px; margin-left: -40px; z-index: 10;"><i
+                            class="fas fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <h5 id="sectionTitle" class="fw-bold text-muted mb-4">Cargando datos...</h5>
+
+        <div class="row g-4" id="gamesContainer">
+            <div class="text-center w-100 py-5">
+                <div class="spinner-border text-danger" role="status" style="width: 3rem; height: 3rem;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="gameDetailModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalGameTitle">Cargando...</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0" id="modalGameBody">
+                    <div class="text-center py-5">
+                        <div class="spinner-border text-danger" style="width: 3rem; height: 3rem;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
