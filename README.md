@@ -10,6 +10,3 @@ Este proyecto es una muestra de mis capacidades como **Frontend Developer Junior
 
 ### 🛠️ Tecnologías:
 HTML5 | CSS3 | JavaScript (ES6+) | Bootstrap 5 | FontAwesome
-
----
-Desarrollado con ❤️ por Fabián García - Estudiante de ISIL.
